@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/neo4jd3.min.css?v=0.0.1">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="neo4jd3" style="height: 100vh;"></div>
+            </div>
+            <div class="col">
+                <form>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="students" style="margin-top: 15px;">Alunos</label>
+                            <button id="addStudent" type="button" class="btn btn-outline-secondary"
+                                style="float: right; padding: 0.08rem .45rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                </svg>
+                                <span class="visually-hidden"></span>
+                            </button>
+                        </div>
+                        <div id="studentInputs">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="ID do Aluno">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Nome do Aluno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="ID do Aluno">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Nome do Aluno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="ID do Aluno">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Nome do Aluno">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="ID do Aluno">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Nome do Aluno">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="skills">Habilidades</label>
+                            <button id="addSkill" type="button" class="btn btn-outline-secondary"
+                                style="float: right; padding: 0.08rem .45rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-plus" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                </svg>
+                                <span class="visually-hidden"></span>
+                            </button>
+                        </div>
+                        <div id="skillInputs">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Código">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="createCourse" class="btn btn-primary" style="margin-bottom: 15px;">Criar Curso</button>
+                    <div id="questions">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Questionário</label>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="ID do Aluno">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Código">
+                                </div>
+                                <div class="col">
+                                    <select style="height: 34px;" class="form-control" id="exampleFormControlSelect1">
+                                        <option value="0">Errado</option>
+                                        <option value="1">Certo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="answerQuestion" class="btn btn-primary">Responder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        import sarc from "./sarc.js";
+
+        // 'student_id' é o id do aluno no banco de dados do cliente,
+        // cada 'student_id' é referenciado localmente há um curso,
+        // dessa forma se quiser recuperar o aluno de vários cursos,
+        // cabe ao cliente implementar
+        var students = [
+            { student_id: 1, name: "Ada" }, { student_id: 2, name: "Mel" }, { student_id: 3, name: "Gil" },
+            { student_id: 4, name: "Ivo" }, { student_id: 5, name: "Val" }, { student_id: 6, name: "Ney" },
+            { student_id: 7, name: "Gui" }, { student_id: 8, name: "Leo" }, { student_id: 9, name: "Rui" },
+        ]
+
+        var skills = [
+            { name: 'EM13CNT201' }, { name: 'EM13CNT106' }, { name: 'EM13CNT105' },
+            { name: 'EM13CNT202' }, { name: 'EM13CNT104' }, { name: 'EM13CNT203' },
+            { name: 'EM13CNT101' }, { name: 'EM13CNT102' }, { name: 'EM13CNT103' }
+        ]
+
+        // var course = await sarc.create( 'Quimica', 'Curso de Quimica do 1º ano do Ensino Médio', students, skills );
+        // [
+        //    {"index": 1576, "row": 1927, "student_id": "745Yh", "correct": 1, "skill": "EM13CNT101"},
+        //    {"index": 1580, "row": 1931, "student_id": "745Yh", "correct": 0, "skill": "EM13CNT101"},
+        //    {"index": 1596, "row": 1947, "student_id": "745Yh", "correct": 0, "skill": "EM13CNT101"},
+        //    ...
+        // ]
+        const data = await new Promise((rs, rj) => {
+            fetch('./data.json')
+                .then(r => r.json())
+                .then(d => { rs(d) })
+                .catch(e => { rj(e) });
+        })
+
+        // await sarc.fit(data);
+        // sarc.predict();
+        // sarc.predict();
+        // sarc.predict();
+
+        document.getElementById('addStudent').onclick = function () {
+            document.getElementById('studentInputs').innerHTML += `
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="ID do Aluno">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nome do Aluno">
+                    </div>
+                </div>
+            </div>
+            `
+        }
+
+        document.getElementById('addSkill').onclick = function () {
+            document.getElementById('skillInputs').innerHTML += `
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Código">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Código">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Código">
+                    </div>
+                </div>
+            </div>
+            `
+        }
+
+        document.getElementById('createCourse').onclick = async function () {
+            var students = [];
+
+            var input = document.getElementById('studentInputs').children;
+            var length = document.getElementById('studentInputs').children.length;
+            for (var i = 0; i < length; i++) {
+                var student_id = input[i].children[0].children[0].children[0].value;
+                var name = input[i].children[0].children[1].children[0].value;
+
+                students.push({ student_id: student_id, name: name });
+            }
+
+            var skills = [];
+
+            var input = document.getElementById('skillInputs').children;
+            var length = document.getElementById('skillInputs').children.length;
+            for (var i = 0; i < length; i++) {
+                for (var j = 0; j < 3; j++) {
+                    var name = input[i].children[0].children[j].children[0].value;
+                    skills.push({ name: name });
+                }
+            }
+
+            console.log(students, skills);
+
+            var course = await sarc.create( 'Quimica', 'Curso de Quimica do 1º ano do Ensino Médio', students, skills );
+            
+            console.log(course);
+
+            var nodes = []
+            var relationships = []
+            for (var sk in course.skills) {
+                nodes.push(
+                    {
+                        "id": course.skills[sk].name,
+                        "labels": [course.skills[sk].name],
+                        "properties": {
+                            "Habilidade": course.skills[sk].name
+                        }
+                    }
+                )
+
+                if (sk > 0)
+                    relationships.push(
+                        {
+                            "id": "1",
+                            "type": "termmologia",
+                            "startNode": course.skills[sk - 1].name,
+                            "endNode": course.skills[sk].name,
+                            "properties": {}
+                        }
+                    )
+            }
+
+            neoData.neo4jData = {
+                results: [{
+                    columns: ["user", "entity"],
+                    data: [{
+                        graph: {
+                            nodes: nodes,
+                            relationships: relationships
+                        }
+                    }]
+                }]
+            }
+
+            neo4jd3 = new Neo4jd3('#neo4jd3', neoData);
+
+            var length = document.getElementsByClassName('nodes')[0].children.length
+            var children = document.getElementsByClassName('nodes')[0].children
+
+            for(var i=0; i<length; i++) {
+                children[i].getElementsByClassName('mastery_prob')[0].id = children[i].__data__.id
+            }
+
+            for (var sk in course.skills) {
+                if (course.skills[sk].mastery_prob == 0) 
+                    document.getElementById(course.skills[sk].name).innerHTML = "0.00";
+                else if (course.skills[sk].mastery_prob == 1)
+                    document.getElementById(course.skills[sk].name).innerHTML = "1.00";
+                else
+                    document.getElementById(course.skills[sk].name).innerHTML = course.skills[sk].mastery_prob;
+            }
+
+            if (document.getElementById(course.skills[sk].name).innerHTML.length == 3)
+                document.getElementById('EM13CNT102').innerHTML += "0"
+
+            await sarc.fit(data);
+        }
+
+        document.getElementById('answerQuestion').onclick = async function () {
+            var input = document.getElementById('questions').children[0].children[1].children;
+            var length = document.getElementById('questions').children[0].children[1].children.length;
+
+            var map = ["student_id", "skill", "correct"]
+
+            var answer = {
+                "index": -1, 
+                "row": -1
+            };
+
+            for (var i = 0; i < length; i++) {
+                var name = input[i];
+                answer[map[i]] = name.children[0].value;
+            }
+
+            var student = await sarc.predict([answer]);
+            student = JSON.parse(student);
+            console.log(student);
+
+            var name = Object.keys(student)[0]
+            var skill = Object.keys(student[name])[0] 
+
+            console.log(student[name][skill]);
+
+            var level = student[name][skill]["level"];
+            level = Math.round(level * 100) / 100;
+            console.log(level);
+
+            if (level == 0)
+                document.getElementById(skill).innerHTML = "0.00";
+            else if (level == 1)
+                document.getElementById(skill).innerHTML = "1.00";
+            else
+                document.getElementById(skill).innerHTML = level;
+
+            if (document.getElementById(skill).innerHTML.length == 3)
+                document.getElementById(skill).innerHTML += "0"
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/neo4jd3.js?v=0.0.1"></script>
+    <script>
+        var neoData;
+
+        function init() {
+            neoData = {
+                highlight: [
+                    {
+                        class: 'Project',
+                        property: 'name',
+                        value: 'neo4jd3'
+                    }, {
+                        class: 'User',
+                        property: 'userId',
+                        value: 'eisman'
+                    }
+                ],
+                colors: [
+                    '#ced2d9', 
+                    '#47991f', 
+                    '#ced2d9', 
+                    '#47991f', 
+                    '#ff928c',
+                    '#ff928c', 
+                    '#47991f',
+                    '#ced2d9',
+                    '#ced2d9',
+                    '#ced2d9',
+                    '#ced2d9'
+                ],
+                icons: {
+                    'Api': 'gear',
+                    'Cookie': 'paw',
+                    'Email': 'at',
+                    'Git': 'git',
+                    'Github': 'github',
+                    'Google': 'google',
+                    'Ip': 'map-marker',
+                    'Issues': 'exclamation-circle',
+                    'Language': 'language',
+                    'Options': 'sliders',
+                    'Password': 'lock',
+                    'Phone': 'phone',
+                    'Project': 'folder-open',
+                    'SecurityChallengeAnswer': 'commenting',
+                    'User': 'user',
+                    'zoomFit': 'arrows-alt',
+                    'zoomIn': 'search-plus',
+                    'zoomOut': 'search-minus'
+                },
+                minCollision: 60,
+                nodeRadius: 20,
+                onNodeDoubleClick: (code) => { switch(node.id) {} },
+                onRelationshipDoubleClick: (relationship) => {
+                    console.log('double click on relationship: ' + JSON.stringify(relationship));
+                },
+                zoomFit: true
+            }
+            var neo4jd3 = new Neo4jd3('#neo4jd3', neoData);
+        }
+
+        window.onload = init;
+    </script>
+</body>
+
+</html>

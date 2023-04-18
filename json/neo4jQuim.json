@@ -1,0 +1,140 @@
+{
+    "results": [{
+        "columns": ["user", "entity"],
+        "data": [{
+            "graph": {
+                "nodes": [{
+                    "id": "EM13CNT101",
+                    "labels": ["EM13CNT101"],
+                    "properties": {
+                        "bncc": "EM13CNT101",
+                        "Descrição": "Analisar e representar, com ou sem o uso de dispositivos e de aplicativos digitais específicos, as transformações e conservações em sistemas que envolvam quantidade de matéria, de energia e de movimento para realizar previsões sobre seus comportamentos em situações cotidianas e em processos produtivos que priorizem o desenvolvimento sustentável, o uso consciente dos recursos naturais e a preservação da vida em todas as suas formas."
+                    }
+                }, {
+                    "id": "EM13CNT102",
+                    "labels": ["EM13CNT102"],
+                    "properties": {
+                        "bncc": "EM13CNT102",
+                        "Descrição": "Realizar previsões, avaliar intervenções e/ou construir protótipos de sistemas térmicos que visem à sustentabilidade, considerando sua composição e os efeitos das variáveis termodinâmicas sobre seu funcionamento, considerando também o uso de tecnologias digitais que auxiliem no cálculo de estimativas e no apoio à construção dos protótipos."
+                    }
+                }, {
+                    "id": "EM13CNT103",
+                    "labels": ["EM13CNT103"],
+                    "properties": {
+                        "bncc": "EM13CNT103",
+                        "Descrição": "Utilizar o conhecimento sobre as radiações e suas origens para avaliar as potencialidades e os riscos de sua aplicação em equipamentos de uso cotidiano, na saúde, no ambiente, na indústria, na agricultura e na geração de energia elétrica."
+                    }
+                }, {
+                    "id": "EM13CNT104",
+                    "labels": ["EM13CNT104"],
+                    "properties": {
+                        "bncc": "EM13CNT104",
+                        "Descrição": "Avaliar os benefícios e os riscos à saúde e ao ambiente, considerando a composição, a toxicidade e a reatividade de diferentes materiais e produtos, como também o nível de exposição a eles, posicionando-se criticamente e propondo soluções individuais e/ou coletivas para seus usos e descartes responsáveis."
+                    }
+                }, {
+                    "id": "EM13CNT105",
+                    "labels": ["EM13CNT105"],
+                    "properties": {
+                        "bncc": "EM13CNT105",
+                        "Descrição": "Analisar os ciclos biogeoquímicos e interpretar os efeitos de fenômenos naturais e da interferência humana sobre esses ciclos, para promover ações individuais e/ ou coletivas que minimizem consequências nocivas à vida."
+                    }
+                }, {
+                    "id": "EM13CNT106",
+                    "labels": ["EM13CNT106"],
+                    "properties": {
+                        "bncc": "EM13CNT106",
+                        "Descrição": "Avaliar, com ou sem o uso de dispositivos e aplicativos digitais, tecnologias e possíveis soluções para as demandas que envolvem a geração, o transporte, a distribuição e o consumo de energia elétrica, considerando a disponibilidade de recursos, a eficiência energética, a relação custo/benefício, as características geográficas e ambientais, a produção de resíduos e os impactos socioambientais e culturais."
+                    }
+                }, {
+                    "id": "EM13CNT202",
+                    "labels": ["EM13CNT202"],
+                    "properties": {
+                        "bncc": "EM13CNT202",
+                        "Descrição": "Analisar as diversas formas de manifestação da vida em seus diferentes níveis de organização, bem como as condições ambientais favoráveis e os fatores limitantes a elas, com ou sem o uso de dispositivos e aplicativos digitais (como softwares de simulação e de realidade virtual, entre outros)."
+                    }
+                }, {
+                    "id": "EM13CNT203",
+                    "labels": ["EM13CNT203"],
+                    "properties": {
+                        "bncc": "EM13CNT203",
+                        "Descrição": "Avaliar e prever efeitos de intervenções nos ecossistemas, e seus impactos nos seres vivos e no corpo humano, com base nos mecanismos de manutenção da vida, nos ciclos da matéria e nas transformações e transferências de energia, utilizando representações e simulações sobre tais fatores, com ou sem o uso de dispositivos e aplicativos digitais (como softwares de simulação e de realidade virtual, entre outros)."
+                    }
+                }, {
+                    "id": "EM13CNT201",
+                    "labels": ["EM13CNT201"],
+                    "properties": {
+                        "bncc": "EM13CNT201",
+                        "Descrição": "Analisar e discutir modelos, teorias e leis propostos em diferentes épocas e culturas para comparar distintas explicações sobre o surgimento e a evolução da Vida, da Terra e do Universo com as teorias científicas aceitas atualmente."
+                    }
+                }], 
+                
+                "relationships": [{
+                    "id": "1",
+                    "type": "termmologia",
+                    "startNode": "EM13CNT101",
+                    "endNode": "EM13CNT102",
+                    "properties": {
+                        "from": 1
+                    }
+                }, {
+                    "id": "2",
+                    "type": "radiacao",
+                    "startNode": "EM13CNT101",
+                    "endNode": "EM13CNT103",
+                    "properties": {
+                        "from": 1
+                    }
+                }, {
+                    "id": "3",
+                    "type": "riscos",
+                    "startNode": "EM13CNT101",
+                    "endNode": "EM13CNT104",
+                    "properties": {
+                        "from": 1
+                    }
+                }, {
+                    "id": "4",
+                    "type": "biogeoquímica",
+                    "startNode": "EM13CNT101",
+                    "endNode": "EM13CNT105",
+                    "properties": {
+                        "from": 1
+                    }
+                }, {
+                    "id": "5",
+                    "type": "energia elétrica",
+                    "startNode": "EM13CNT101",
+                    "endNode": "EM13CNT106",
+                    "properties": {
+                        "from": 1473581532586
+                    }
+                }, {
+                    "id": "6",
+                    "type": "evolução",
+                    "startNode": "EM13CNT106",
+                    "endNode": "EM13CNT201",
+                    "properties": {
+                        "from": 6
+                    }
+                }, {
+                    "id": "7",
+                    "type": "vida",
+                    "startNode": "EM13CNT201",
+                    "endNode": "EM13CNT202",
+                    "properties": {
+                        "from": 9
+                    }
+                }, {
+                    "id": "8",
+                    "type": "ecossistemas",
+                    "startNode": "EM13CNT202",
+                    "endNode": "EM13CNT203",
+                    "properties": {
+                        "from": 7
+                    }
+                }]
+            }
+        }]
+    }],
+    "errors": []
+}
