@@ -1,3 +1,5 @@
+const host = 'https://sarc.onrender.com'
+// const host = 'http://localhost:8000'
 const sarc = {
     course: undefined,
     create(name, description, students, skills) {
@@ -9,7 +11,7 @@ const sarc = {
                 skills: skills
             }
 
-            fetch(`https://sarc.onrender.com/snippets/create/course/`, {
+            fetch(`${host}/snippets/create/course/`, {
                 method: "POST",
                 body: JSON.stringify(info), 
                 headers: { "Content-Type": "application/json" }
@@ -18,6 +20,7 @@ const sarc = {
             .then((course) => {
                 sarc.course = course;
                 console.log(course)
+                document.getElementById('annotation').innerHTML = "Curso criado, treinando..." 
                 resolve(course)
             })
             .catch((error) => { 
@@ -28,13 +31,14 @@ const sarc = {
     },
     fit(data) {
         return new Promise( function(resolve, reject) {
-            fetch(`https://sarc.onrender.com/snippets/create/model/`, {
+            fetch(`${host}/snippets/create/model/`, {
                 method: "POST",
                 body: JSON.stringify({ 'course': sarc.course.pk, 'data': data }), 
                 headers: { "Content-Type": "application/json" }
             })
             .then((response) => response.json())
             .then((data) => {
+                document.getElementById('annotation').innerHTML = "Curso treinado, pode responder o questionário" 
                 resolve(data)
             })
             .catch((error) => { 
@@ -50,7 +54,7 @@ const sarc = {
                 answers: answers
             }
 
-            fetch(`https://sarc.onrender.com/snippets/update/course/`, {
+            fetch(`${host}/snippets/update/course/`, {
                 method: "POST",
                 body: JSON.stringify(info), 
                 headers: { "Content-Type": "application/json" }
