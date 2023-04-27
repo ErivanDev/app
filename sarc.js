@@ -20,7 +20,7 @@ const sarc = {
             .then((course) => {
                 sarc.course = course;
                 console.log(course)
-                document.getElementById('annotation').innerHTML = "Curso criado, treinando..." 
+                document.getElementById('annotation').innerHTML = "curso criado, treinando..." 
                 resolve(course)
             })
             .catch((error) => { 
@@ -38,7 +38,7 @@ const sarc = {
             })
             .then((response) => response.json())
             .then((data) => {
-                document.getElementById('annotation').innerHTML = "Curso treinado, pode responder o questionário" 
+                document.getElementById('annotation').innerHTML = "curso treinado, pode responder o questionário" 
                 resolve(data)
             })
             .catch((error) => { 
